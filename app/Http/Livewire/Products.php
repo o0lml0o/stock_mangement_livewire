@@ -129,8 +129,8 @@ final class Products extends PowerGridComponent
                 ->searchable()
                 ->makeInputText(),
 
-            Column::make('STORE ID', 'store_id')
-                ->makeInputRange(),
+            //Column::make('STORE ID', 'store_id')
+              //  ->makeInputRange(),
 
             Column::make('CREATED AT', 'created_at_formatted', 'created_at')
                 ->searchable()
@@ -160,21 +160,21 @@ final class Products extends PowerGridComponent
      * @return array<int, Button>
      */
 
-    /*
+
     public function actions(): array
     {
        return [
            Button::make('edit', 'Edit')
                ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2.5 m-1 rounded text-sm')
-               ->route('product.edit', ['product' => 'id']),
+               ->route('products.edit', ['product' => 'id']),
 
            Button::make('destroy', 'Delete')
-               ->class('bg-red-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
-               ->route('product.destroy', ['product' => 'id'])
+               ->class('bg-indigo-500 cursor-pointer text-white px-3 py-2 m-1 rounded text-sm')
+               ->route('products.destroy', ['product' => 'id'])
                ->method('delete')
         ];
     }
-    */
+
 
     /*
     |--------------------------------------------------------------------------

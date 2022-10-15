@@ -15,6 +15,7 @@
 
         <!-- Styles -->
         @livewireStyles
+
         @powerGridStyles
     </head>
     <body class="font-sans antialiased">
