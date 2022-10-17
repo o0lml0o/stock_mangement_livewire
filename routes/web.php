@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\OrderController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\PurchaseController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,6 +30,6 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
-    Route::resource('products',ProductController::class);
+    Route::resources(['products'=>ProductController::class,'orders'=>OrderController::class,'purchases'=>PurchaseController::class,'clients'=>ClientController::class,'payments'=>PaymentController::class]);
 
 });
